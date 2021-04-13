@@ -2,7 +2,7 @@
  * This program demonstrates a solution to the* isMember Method programming
  * challenge.
  */
-public class Ch15Lab1 {
+public class App {
 	/**
 	 * The isMember method searches all or part of an array for value.
 	 *
@@ -19,7 +19,7 @@ public class Ch15Lab1 {
 		if (array[size - 1] == value) {
 			return true;
 		} else {
-			return Ch15Lab1.isMember(array, value, size - 1);
+			return App.isMember(array, value, size - 1);
 		}
 	}
 
@@ -28,7 +28,7 @@ public class Ch15Lab1 {
 		final int[] numbers = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
 		// Test all of the values from 0 through 20 and see if// they are in the array.
 		for (var x = 0; x <= 20; x++) {
-			if (Ch15Lab1.isMember(numbers, x, ARRAY_SIZE)) {
+			if (App.isMember(numbers, x, ARRAY_SIZE)) {
 				System.out.println(x + " is found in the array.\n");
 			} else {
 				System.out.println(x + " is not found in the array.\n");
