@@ -13,14 +13,7 @@ public class App {
 	 *         false.
 	 */
 	public static boolean isMember(final int[] array, final int value, final int size) {
-		if (size == 0) {
-			return false;
-		}
-		if (array[size - 1] == value) {
-			return true;
-		} else {
-			return App.isMember(array, value, size - 1);
-		}
+		return (size == 0) ? false : (array[size - 1] == value) ? true : App.isMember(array, value, size - 1);
 	}
 
 	public static void main(final String[] args) {
