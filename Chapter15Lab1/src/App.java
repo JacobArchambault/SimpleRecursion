@@ -12,10 +12,11 @@ public class App {
 	 * @return If the value is found, the method returns true. Otherwise, it returns
 	 *         false.
 	 */
-	public static boolean isMemberRecursive(final int[] array, final int value, final int size) {
+	private static boolean isMemberRecursive(final int[] array, final int value, final int size) {
 		return (size == 0) ? false : (array[size - 1] == value) ? true : App.isMemberRecursive(array, value, size - 1);
 	}
 
+	
 	public static void main(final String[] args) {
 		final int[] numbers = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
 		// Test all of the values from 0 through 20 and see if// they are in the array.
