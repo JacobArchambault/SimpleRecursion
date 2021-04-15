@@ -20,7 +20,7 @@ public class App {
 		final int[] numbers = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
 		// Test all of the values from 0 through 20 and see if// they are in the array.
 		for (var x = 0; x <= 20; x++) {
-			if (App.isMember(numbers, x, 10)) {
+			if (App.isMember(numbers, x, numbers.length)) {
 				System.out.println(x + " is found in the array.\n");
 			} else {
 				System.out.println(x + " is not found in the array.\n");
