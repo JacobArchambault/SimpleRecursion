@@ -12,20 +12,20 @@ public class App {
 	 * @return If the value is found, the method returns true. Otherwise, it returns
 	 *         false.
 	 */
-	private static boolean isMemberRecursive(final int[] array, final int value, final int size) {
-		return (size == 0) ? false : (array[size - 1] == value) ? true : App.isMemberRecursive(array, value, size - 1);
-	}
 
-	
 	public static void main(final String[] args) {
 		final int[] numbers = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
+		MyArray myArray = new MyArray(numbers);
 		// Test all of the values from 0 through 20 and see if// they are in the array.
+		System.out.println("Without recursion: ");
 		for (var x = 0; x <= 20; x++) {
-			if (App.isMemberRecursive(numbers, x, numbers.length)) {
-				System.out.println(x + " is found in the array.\n");
-			} else {
-				System.out.println(x + " is not found in the array.\n");
-			}
+			System.out.println(
+					myArray.hasMember(x) ? x + " is found in the array.\n" : x + " is not found in the array.\n");
+		}
+		System.out.println("With recursion: ");
+		for (var x = 0; x <= 20; x++) {
+			System.out.println(
+					myArray.hasMemberRecursive(x, 10) ? x + " is found in the array.\n" : x + " is not found in the array.\n");
 		}
 	}
 }
